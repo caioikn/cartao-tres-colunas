@@ -1,0 +1,130 @@
+:root {
+    --laranja: hsl(31, 77%, 52%);
+    --ciano: hsl(184, 100%, 22%);
+    --ciano-escuro: hsl(179, 100%, 13%);
+
+    --branco-transparente: hsla(0, 0%, 100%, 0.75);
+    --cinza-claro: hsl(0, 0%, 95%);
+
+    --fonte-principal: 'Lexend Deca', sans-serif;
+    --fonte-titulo: 'Big Shoulders Display', sans-serif;
+}
+
+body {
+    background-color: var(--branco-transparente);
+    color: var(--branco-transparente);
+    font-family: var(--fonte-principal);
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.container {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+}
+
+.container-lista {
+    display: flex;
+    width: 60%;
+}
+
+.lista-sedans,
+.lista-suvs,
+.lista-luxos {
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.lista-sedans {
+    background-color: var(--laranja);
+    border-radius: 8px 0px 0px 8px;
+}
+
+.lista-suvs {
+    background-color: var(--ciano);
+}
+
+.lista-luxos {
+    background-color: var(--ciano-escuro);
+    border-radius: 0px 8px 8px 0px;
+}
+
+.lista__icone {
+    height: 40px;
+    margin-bottom: 32px;
+    width: 64px;
+}
+
+.lista__titulo {
+    color: var(--cinza-claro);
+    font-family: var(--fonte-titulo);
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 32px;
+}
+
+.lista__texto {
+    line-height: 2rem;
+    margin-bottom: 64px;
+}
+
+.lista__botao {
+    align-self: flex-start;
+    background-color: var(--cinza-claro);
+    border: 2px solid transparent;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: var(--fonte-principal);
+    font-size: 15px;
+    padding: 15px 30px;
+}
+
+.lista__botao:hover {
+    background-color: transparent;
+    color: var(--cinza-claro);
+    border: 2px solid var(--cinza-claro);
+    transition: 0.2s ease-in-out;
+}
+
+.botao-sedan {
+    color: var(--laranja);
+}
+
+.botao-suv {
+    color: var(--ciano);
+}
+
+.botao-luxo {
+    color: var(--ciano-escuro);
+}
+
+@media screen and (max-width: 375px) {
+    .container {
+        flex-direction: column;
+        height: 100%;
+        margin: 30px;
+    }
+
+    .container-lista {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .lista-sedans,
+    .lista-suvs,
+    .lista-luxos {
+        padding: 40px;
+    }
+
+    .lista-sedans {
+        border-radius: 8px 8px 0px 0px;
+    }
+
+    .lista-luxos {
+        border-radius: 0px 0px 8px 8px;
+    }
+}
